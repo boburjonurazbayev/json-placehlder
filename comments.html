@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Comments</title>
+  </head>
+  <body>
+    <!-- Main -->
+
+    <main class="main"></main>
+
+    <!-- Comments -->
+
+    <section class="comments">
+      <div class="container">
+        <div class="buttons">
+          <button class="prev__btn">Posts</button>
+
+          <button class="log-out__btn">Log out</button>
+        </div>
+
+        <ul class="comments__list"></ul>
+      </div>
+    </section>
+
+    <!-- Comments template -->
+
+    <template id="comments__list-template">
+      <li class="comments__item">
+        <h3 class="comments__name"></h3>
+
+        <p class="comments__body"></p>
+
+        <a class="comments__email-link" href="#"></a>
+      </li>
+    </template>
+
+    <script src="js/comments.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Posts</title>
+  </head>
+  <body>
+    <!-- Main -->
+
+    <main class="main">
+      <!-- Posts -->
+
+      <section class="posts">
+        <div class="container">
+          <div class="buttons">
+            <button class="prev__btn">Users</button>
+
+            <button class="log-out__btn">Log out</button>
+          </div>
+
+          <ul class="posts__list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Posts template -->
+
+    <template id="posts__list-template">
+      <li class="posts__item">
+        <h3 class="posts__title"></h3>
+
+        <p class="posts__body"></p>
+
+        <button class="posts__comments-btn">Go to comments</button>
+      </li>
+    </template>
+    <script src="js/posts.js"></script>
+  </body>
+</html>

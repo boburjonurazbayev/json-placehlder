@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Users</title>
+  </head>
+  <body>
+    <!-- Main -->
+    <main class="main">
+      <!-- Users -->
+
+      <section class="users">
+        <div class="container">
+          <button class="log-out__btn">Log out</button>
+
+          <ul class="users__list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Users template -->
+    <template id="users__list-template">
+      <li class="users__item">
+        <img
+          class="users__avatar"
+          src="./images/unknown-user-icon.jpg"
+          alt="Unknown user`s avatar"
+          width="200"
+          height="200"
+        />
+
+        <div class="users__info">
+          <h3 class="users__name"></h3>
+
+        <div class="users__all-link">
+          <p class="users__email">
+            <span class="users__email-text">Email: </span>
+
+            <a class="users__email-link" href=""></a>
+          </p>
+
+          <p class="users__website">
+            <span class="users__website-text">Website: </span>
+
+            <a class="users__website-link" href=""></a>
+          </p>
+
+          <a
+            class="users__location-link"
+            href="https://www.google.com/maps/place/-37.3159,81.1496"
+          >
+            Locaton
+          </a>
+        </div>
+
+          <p class="users__address"></p>
+
+          <p class="users__zipcode"></p>
+
+          <p class="users__phone"></p>
+
+          <p class="users__company-name"></p>
+
+          <p class="users__company-info"></p>
+
+          <button class="users__posts-btn" data-id="">Go to posts</button>
+        </div>
+      </li>
+    </template>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
