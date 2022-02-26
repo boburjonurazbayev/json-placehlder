@@ -1,32 +1,36 @@
 .buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 150px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+}
+
+.posts__heading {
+  text-align: center;
 }
 
 .posts__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: 700px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
 }
 
 .posts__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .posts__comments-btn {
-    margin-top: 20px;
+  margin-top: 20px;
 }

@@ -1,3 +1,7 @@
+.comments__heading {
+    text-align: center;
+}
+
 .comments__list {
     display: flex;
     flex-wrap: wrap;
@@ -16,6 +20,10 @@
     margin-bottom: 20px;
     padding: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.comments__name {
+    text-align: center;
 }
 
 .comments__body {

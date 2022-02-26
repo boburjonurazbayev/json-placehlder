@@ -3,6 +3,7 @@ const elLogOutBtn = document.querySelector(".log-out__btn");
 const elPrevBtn = document.querySelector(".prev__btn");
 const elPostsList = document.querySelector(".posts__list");
 const elPostsTemplate = document.querySelector("#posts__list-template").content;
+const elPostsHeading = document.querySelector(".posts__heading");
 
 // Get tokens from localStorage
 const token = window.localStorage.getItem("token");
@@ -34,12 +35,12 @@ elPrevBtn.addEventListener("click", () => {
 });
 
 function normalizePostId(number) {
-  const eachUserPosts = 10;
+  const usersNumber = 10;
 
-  let normalizedId = number % eachUserPosts;
+  let normalizedId = number % usersNumber;
 
   if (normalizedId === 0) {
-    normalizedId = 10;
+    normalizedId = usersNumber;
   }
 
   return normalizedId;
@@ -58,8 +59,10 @@ const renderPosts = (array, node) => {
     postsTemplate.querySelector(".posts__body").textContent = row.body;
     postsTemplate.querySelector(".posts__comments-btn").dataset.id = row.id;
     postsTemplate.querySelector(".posts__comments-btn").textContent =
-      normalizePostId(row.id) + "-post comments";
+      normalizePostId(row.id) + "-post`s comments";
 
+    elPostsHeading.textContent =
+      window.localStorage.getItem("userId") + "-user`s posts";
     postsFragment.appendChild(postsTemplate);
   });
 

@@ -5,6 +5,7 @@ const elCommentsList = document.querySelector(".comments__list");
 const elCommentsTemplate = document.querySelector(
   "#comments__list-template"
 ).content;
+const elCommentsHeading = document.querySelector(".comments__heading");
 
 // Get tokens from localStorage
 const token = window.localStorage.getItem("token");
@@ -30,7 +31,7 @@ if (!postIdToken) {
 elLogOutBtn.addEventListener("click", () => {
   window.localStorage.removeItem("token");
   window.localStorage.removeItem("userId");
-  window.localStorage.removeItem("postId")
+  window.localStorage.removeItem("postId");
 
   window.location.replace("posts.html");
 });
@@ -42,11 +43,24 @@ elPrevBtn.addEventListener("click", () => {
   window.location.replace("comments.html");
 });
 
+// Normalize post number
+const normalizePost = (number) => {
+  let userNumber = 10;
+  let normalizedPostNumber = number % userNumber;
+
+  if (normalizedPostNumber === 0) {
+    normalizedPostNumber = userNumber;
+  }
+
+  return normalizedPostNumber;
+};
+
 //   Render Comments
 const renderComments = (array, node) => {
   node.innerHTML = null;
 
   const commentsFragment = document.createDocumentFragment();
+  const postIdToken = window.localStorage.getItem("postId");
 
   array.forEach((row) => {
     const commentsTemplate = elCommentsTemplate.cloneNode(true);
@@ -60,6 +74,9 @@ const renderComments = (array, node) => {
 
     commentsFragment.appendChild(commentsTemplate);
   });
+
+  elCommentsHeading.textContent =
+    normalizePost(postIdToken) + "-post`s comments";
 
   node.appendChild(commentsFragment);
 };
